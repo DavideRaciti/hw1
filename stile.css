@@ -1,0 +1,336 @@
+body{
+  background-color: rgba(185, 175, 175, 0.9);
+  margin: 0;
+  font-family: 'Playfair Display', Arial;
+  color: #f8f8f8;
+}
+  
+header{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;    
+  background-image: url('./image/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+  
+body #barra{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  z-index: 999;
+}
+  
+#logo{
+  font-size: 40px;
+  font-weight: bold;
+}
+  
+#links a{
+  margin: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+#links a:hover{
+  color: rgba(218, 15, 15, 0.82);
+}
+  
+#separator{
+  display: inline-block;
+  height: 15px;
+  width: 2px;
+  background: currentColor;
+}
+  
+#menu {
+  display: none;
+}
+  
+#menu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+  
+.button{
+  background-color: rgb(115, 5, 225);
+  padding: 5px 15px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#links .button:hover{
+  background-color: white;
+  color: rgb(115, 5, 225);
+}
+  
+header h1{
+  z-index: 1;
+  font-size: 3.3em;
+  margin-top: 30%;
+}
+
+.txt{
+  text-align: center;
+  margin-top: 50px;
+}
+  
+/*box marchio/modello*/
+.box {
+  width: 20%;
+  height: 20%;
+  transform: translate(+20%, +10%);
+}
+
+.box select {
+  background-color: rgb(115, 5, 225);
+  color: white;
+  padding: 12px;
+  width: 85%;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+  
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 18px;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+  
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+  
+.box select option {
+  padding: 30px;
+}
+
+.subtitle{
+  z-index: 1;
+  font-size: 20px;
+}
+
+#search input[type=submit]{
+  display: none;
+}
+  
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center
+}
+
+#results{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+#results div{
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+#results div h1{
+  font-size: 40px;
+}
+
+#results div h2{
+  font-size: 30px;
+}
+
+#results div p{
+  font-size: 20px;
+}
+  
+section, h2{
+  color: black;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+  
+.search label{
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+  
+.search input:focus{
+  outline: none;
+}
+  
+.searchBar{
+  font-size: 16px;
+  width: 40%;
+  height: 50px;
+  padding: 16px 14px 18px;
+  border: 2px solid #070a21;
+  border-radius: 50px;
+  margin-top: 5px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer {
+  position: relative;
+  background-color: rgb(31, 31, 31);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: rgb(158, 99, 217);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer em {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 500px) {
+  #links {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 2em;
+    padding: 0 30px;
+  }
+}
+
+@media(max-width: 800px){
+  header h1, .subtitle{
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .container{
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 500px){
+  .search label{
+    display: none;
+  }
+}
+
+@media(max-width: 700px){
+  .box::before{
+    display: none;
+  }
+
+  .box option{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media(min-width: 500px) and (max-width: 850px){
+  #links a{
+    display: inline-block;
+    height: 10px;
+    margin-left: 50px;
+  }
+
+  #links .button{
+    height: 20px;
+  }
+
+  #separator{
+    display: none;
+  }
+}
